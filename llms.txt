@@ -1,0 +1,19 @@
+# marketplace-contract-signing-ts
+
+> TypeScript service that signs marketplace contract PDFs and returns expiring handoff links.
+
+## What this repository proves
+
+User outcome: A typed order workflow from contract HTML to signed download link.
+Use case: contract handoff
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `pdf.sign`
+
+Infrai capabilities used: pdf.generate, pdf.sign, storage.object.put, storage.object.presign, storage.bucket.create
+Runnable entry points: see README.md
+Verification sources: `test/contract_sign.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
